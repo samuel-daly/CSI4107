@@ -26,10 +26,11 @@ for x in range(len(no_numbers)):
     if bool(re.match(r'\b[a-zA-Z]+\b', no_numbers[x])):
         regex.append(no_numbers[x])
 
+# Step 7 - Make every word lower cse
 for x in range(len(regex)):
     regex[x] = regex[x].lower()
 
-# Step 7 - Remove the stopwords
+# Step 8 - Remove the stopwords
 stopwords = open('stopwords.txt', 'r')
 stopwords_list = stopwords.read().split()
 
