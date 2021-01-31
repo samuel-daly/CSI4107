@@ -3,7 +3,7 @@ from Modules.indexer import do_indexer
 import re
 from xml.etree import ElementTree
 
-#CREATES INDEX VIA JSON FILE
+#CREATES BOTH INDEXES VIA JSON FILE
 
 #Paths
 stopwords_path = "Modules/data/stopwords.txt"
@@ -19,8 +19,7 @@ document_word_dict, document_word_count_dict = do_preprocessor(tweets_path, stop
 #Indexing
 do_indexer(document_word_count_dict, document_word_dict)
 
-#TO DO: should return 2 dictionaries
-# x_dict, y_dict = do_indexer(document_word_count_dict, document_word_dict)
+
 
 
 
