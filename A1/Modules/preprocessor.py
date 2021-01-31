@@ -43,11 +43,23 @@ def do_preprocessor(tweets_path, stopwords_path):
             tmp1 = words
             words = [w.translate(table) for w in tmp1]
 
+            for x in words:
+                if x in stopwords:
+                    words.remove(x)
+            
+            # Remove words that contain numbers
+            tmp2 = []
+            for x in range(len(words)):
+                if bool(re.match(r'\b[a-zA-Z]+\b', words[x])):
+                    tmp2.append(words[x])
+            words = tmp2
+
             #############################
             #Add More Pre-Processing Here
-
-            #- remove ( " )for example: ->>>> 'team”': {35029412940353536: 1}  team" is a word
-            
+            tmp3 = []
+            for x in words:
+                tmp3.append(x.replace(u"\u201d", ""))
+            words = tmp3
 
 
             #############################
