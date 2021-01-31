@@ -60,16 +60,6 @@ def do_preprocessor(tweets_path, stopwords_path):
     tmp_dict = document_word_dict
     #print(tmp_dict)
     
-    #Keep commented section for now, could be useful later
-    '''
-    #Create token dict
-    dict_tokens = set()
-    for doc in tmp_dict:
-        for i in tmp_dict[doc]:
-            dict_tokens.add(i)
-    
-    print(dict_tokens)
-    '''
 
     #Create document_word_count_dict
     document_word_count_dict = {}
