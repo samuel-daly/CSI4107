@@ -12,8 +12,12 @@ def do_indexer(document_word_count_dict, document_word_dict):
     
     #Create a list for all words (no duplicates)
     all_words = []
-    for token in document_word_dict:
-        token_words = document_word_dict.get(token)
+
+    #Iterate through document_word_dict
+    for i in document_word_dict:
+        token_words = document_word_dict.get(i)
+
+        #Iterate through token_words
         for word in token_words:
             if word not in all_words:
                 all_words.append(word)
@@ -32,7 +36,7 @@ def do_indexer(document_word_count_dict, document_word_dict):
 
 
     #Test out frequency_dict (can comment out)
-    print(frequency_dict)
+    #print(frequency_dict)
 
     
     #Save to folder
@@ -87,7 +91,7 @@ def do_indexer(document_word_count_dict, document_word_dict):
 
             
     #Test out weighted_dict (can comment out)
-    print(weighted_dict)
+    #print(weighted_dict)
 
     
     #Save to folder

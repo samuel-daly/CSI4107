@@ -9,8 +9,8 @@ from xml.etree import ElementTree
 stopwords_path = "Modules/data/stopwords.txt"
 
 #I am using a shorter version because the regular one takes too long to test
-tweets_path = "Modules/data/trec-microblog11-short.txt"
-
+#tweets_path = "Modules/data/trec-microblog11-short.txt"
+tweets_path = "Modules/data/trec-microblog11.txt"
 
 
 #Pre-processing
