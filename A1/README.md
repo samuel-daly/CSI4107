@@ -1,16 +1,16 @@
 # Assignment 1 - CSI4107
 
 ### Students
-Samuel Daly - 8173488
-Ryan Matte -
-Michel Moore -
+Samuel Daly - 8173488  
+Ryan Matte -  
+Michel Moore -  
 
 ### Task Division
-Step 1: Samuel Daly
-Step 2: Michel Moore
-Step 3: Ryan Matte
-Step 4: Ryan Matte
-Step 5: Samuel Daly
+Step 1: Samuel Daly  
+Step 2: Michel Moore  
+Step 3: Ryan Matte  
+Step 4: Ryan Matte  
+Step 5: Samuel Daly  
 
 To Be fixed
 
