@@ -141,7 +141,10 @@ def do_query(document_word_dict_path, frequency_dict_path, weighted_dict_path, q
         for q in t.getroot():
 
             #Sets Query ID
-            query_id = q[0].text[9:][:-1] #string value
+            #query_id = q[0].text[9:][:-1] #string value (MB001)
+            query_id = q[0].text
+            query_id = re.sub('[^0-9]','', query_id) #only digits remain
+            query_id = query_id.lstrip('0') #removes zeros and strings
 
             #Query Processing
             w_vect, f_vect = query_processing(q[1].text, weighted_dict)
