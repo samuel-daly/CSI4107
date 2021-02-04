@@ -50,6 +50,7 @@ Once the processing was done for each tweet and it was save in a dictionnary for
 Vocabulary size = 53310 words
 
 Sample of tokens from the vocabulary  
+
 ottawa  
 human  
 societi  
