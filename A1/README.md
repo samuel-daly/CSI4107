@@ -2,8 +2,8 @@
 
 ### Students
 Samuel Daly - 8173488  
-Ryan Matte -  
-Michel Moore -  
+Ryan Matte -  300027432
+Michel Moore -   
 
 ### Task Division
 Step 1: Samuel Daly  
