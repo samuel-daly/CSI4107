@@ -1,18 +1,18 @@
 # Assignment 1 - CSI4107
 
-### Students
+## Students
 Samuel Daly - 8173488  
 Ryan Matte - 300027432  
 Michel Moore -   
 
-### Task Division
+## Task Division
 Step 1: Samuel Daly  
 Step 2: Michel Moore  
 Step 3: Ryan Matte  
 Step 4: Ryan Matte  
 Step 5: Samuel Daly  
 
-### Folder Layout
+## Folder Layout
 
 ```
 ├── Modules
@@ -32,23 +32,24 @@ Step 5: Samuel Daly
 └── create_results.py
 ```
 
-### How to run program
+## How to run program
 
 First we need to install some packages. Run ***pip install -r requirements.txt*** if you're on windows, and if you're on MacOS run ***pip3 install -r requirements.txt***  
 To create the inverted index, run ***python create_index.py*** if you're on windows, and if you're on MacOS run ***python3 create_index.py***
 Next, to create the results, run ***python create_results.py*** if you're on windows, and if you're on MacOS run ***python3 create_results.py***
 
-### Functionality of the program
+## Functionality of the program
 
 For this assignment, we had to work in order of steps. The first step was to pre-process all of the tweets.All of the preprocessing for the tweets is done in the **processor.py** file. We created a function that takes the file path for the tweetsand the file path for the stopwords. In this function we start off by reading the file of tweets and the goal is to process them to create a vocabulary that we will use to create the inverted index and then use for the future steps. We initially remove the links since we do not want those in the vocabulary. Next we stem the words to create a better vocabulary. To do this we using the *English Stemmer* from the NLTK library. This simplified the stemming for us. Next steps were to remove the punctuation, the stopwords and all the words that also contained numbers in them.We realized that the puntuation removal was leaving some weird unicode text behind, so we added more processing to get rid of those. This process was done for each tweet and therefore created a dictionnary for each tweet that contained the tokenized, stemmed and processed words. The data structure used for this step is a dictionnary which allows us to keep a list of words for each tweet id. It makes it easy to access in the future and it is very maintainable.This dictionnary was saved under the file *document_word_dict.json* which we then use to do the indexing in the future steps.
 
 Once the processing was done for each tweet and it was save in a dictionnary for us to refer, we went ahead and built the inverted index.
 
 
-### Tokens from the vocabulary
+## Tokens from the vocabulary
 
 Vocabulary size = 53310 words
 
+Sample of tokens from the vocabulary  
 ottawa  
 human  
 societi  
