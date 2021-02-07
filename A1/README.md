@@ -44,7 +44,11 @@ For this assignment, we had to work in order of steps. The first step was to pre
 
 Once the processing was done for each tweet and it was saved in a dictionary for us to refer, we went ahead and built the inverted index.
 
+# Indexing
+write here
+
 # Retrieval and ranking
+write here
 
 # Results
 
