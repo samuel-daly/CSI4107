@@ -65,7 +65,7 @@ P_10                  	all	0.3020
 ## Sample tokens from the vocabulary
 
 Vocabulary size = 53310 words
-
+```
 ottawa  
 human  
 societi  
@@ -166,6 +166,7 @@ dizendo
 se  
 era  
 naum  
+```
 
 ## Sample queries
 
