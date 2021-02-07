@@ -62,11 +62,9 @@ P_10                  	all	0.3020
 
 
 
-## Tokens from the vocabulary
+## Sample tokens from the vocabulary
 
 Vocabulary size = 53310 words
-
-Sample of tokens from the vocabulary  
 
 ottawa  
 human  
@@ -168,3 +166,26 @@ dizendo
 se  
 era  
 naum  
+
+## Sample queries
+
+### Query 3
+
+Query 3: "Haiti Aristide return"
+
+#### Results
+
+1. 32384227123134464
+2. 32211683082502144
+3. 29296574815272960
+4. 32411439918489600
+5. 32387196078006272
+6. 29613127372898304
+7. 32080564265680898
+8. 31034174752169984
+9. 33711164877701120
+10. 34694060157435904
+
+### Query 20
+
+
