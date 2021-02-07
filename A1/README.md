@@ -175,14 +175,23 @@ naum
 #### Results
 
 1. 32384227123134464  Haiti allows ex-president's return: Jean-Bertrand Aristide, who was Haiti's first democratically elected leader,... http://aje.me/fQ4j4T
+
 2. 32211683082502144  #int'l #news: Haiti opens door for return of ex-president Aristide: PORT-AU-PRINCE (Reuters) - Haiti'... http://bit.ly/gSIFwd #singapore
+
 3. 29296574815272960  Haiti – Aristide : His return, an international affair… – Haitilibre.com http://bit.ly/gzyLXG #haiti
+
 4. 32411439918489600  Haiti allows ex-president's return: Jean-Bertrand Aristide, who was Haiti's first democratically elected leader,... http://aje.me/fQ4j4T
+
 5. 32387196078006272  Haiti allows ex-president's return: Jean-Bertrand Aristide, who was Haiti's first democratically elected leader,... http://aje.me/fQ4j4T
+
 6. 29613127372898304  If Duvalier Can Return to Haiti, Why Can’t Aristide? – New America Media http://bit.ly/eCWStk #haiti
+
 7. 32080564265680898  Haitian Politics - Rev Jeremiah Wright Wants ARISTIDE To Return To Haiti: Fadel, you just tell the truth and the... http://bit.ly/hdEvaZ
+
 8. 31034174752169984  Haitian Politics - Rev Jeremiah Wright Wants ARISTIDE To Return To Haiti: Hey. Non NOn NOn pou okin rezon aristi... http://bit.ly/ekgjqX
+
 9. 33711164877701120  Haiti's former president Jean-Bertrand Aristide vows to return http://gu.com/p/2nvx3/tf
+
 10. 34694060157435904 Former Haitian President Aristide has been issued with a new passport enabling him to end exile and return to Haiti, from AFP
 
 ### <ins>Query 20</ins>
@@ -191,14 +200,23 @@ naum
 #### Results
 
 1. 31043176684851200  Oxymoron alert: "The lawsuit is bogus & filled with completely inaccurate facts" Taco Bell President said. Inaccurate facts? Freudian slip?
+
 2. 29906116062220290  Lawsuit: Taco Bell Ground Beef Is Really Just "Meat Filling" - @consumerist http://consumerist.com/2011/01/lawsuit-says-taco-bell-ground-beef-is-really-just-taco-meat-filling.html?utm_source=streamsend&utm_medium=email&utm_content=13297631&utm_campaign=Fo
+
 3. 31082136219947008  Taco Bell Counters 'Meat Filling' Charges in Lawsuit With Print, Web Effort http://goo.gl/fb/H9wcB
+
 4. 29853985930219520  That ain't necessarily "beef" in your Taco Bell burrito...a new lawsuit wants the chain to label it "taco meat filling" instead.
+
 5. 32443636847218688  The Ins And Out Of Small Claims: Filling a civil lawsuit against an organization or person in hopes of col... http://tinyurl.com/4s8h474
+
 6. 29158340424634368  Lawsuit Loans – Filling the Need For Funding http://bit.ly/hYuw1C
+
 7. 30048091021246466  RT @bittman: Taco Bell's 'meat' filling is 36% meat. Mostly oats. Which isn't a bad thing, but let's be real: http://bit.ly/dSX8OF
+
 8. 30700675742572545  I wonder what makes all the people who want taco bell to go vegetarian think that they will put real vegetables in the filling.
+
 9. 30019159723089920  Taco Bell's 'meat' filling is 36% meat. Mostly oats, evidently. Which isn't a bad thing, but let's be real: http://bit.ly/dSX8OF
+
 10. 29902271479287808 How Much Actual Beef Is in Taco Bell‘s ’Meat Filling’? | The Blaze http://goo.gl/jrXLK
 
 
