@@ -59,15 +59,15 @@ Once the processing was done for each tweet and it was saved in a dictionary for
 ## Indexing
 
 All of the indexing is done in the **indexer.py** file. The indexing can be split into 2 parts:
-1. Frequency dictionary (frequency_dict.json)
-2. Weighted dictionary (weighted_dict.json)
+#### 1. Frequency dictionary (***frequency_dict.json***)
 
-### frequency_dict.json
 The first part involved creating an inverted index with frequency values in the form of a dictionary. This was done by transforming and inverting ***document_word_dict.json*** and saving this modified dictionary into ***frequency_dict.json***.
 
 We first iterate through ***document_word_dict.json*** and append each word to a new array called **all_words** (no duplicates). Then, we transform this array into a dictionary called **frequency_dict**. From there, we iterate through **document_word_count_dict** (word count dictionary) to add the inner key values to **frequency_dict**. Finally, we save **frequency_dict** as a json file to the data folder.
 
-### weighted_dict.json
+
+#### 2. Weighted dictionary (***weighted_dict.json***)
+
 The second part involved adding weight values to each document for each word. This was done by modifying **frequency_dict** and saving this modified dictionary into ***weighted_dict.json***.
 
 We first deep copy **frequency_dict** to a new dictionary called **weighted_dict**. Then, we iterate through every word in this new dictionary.
