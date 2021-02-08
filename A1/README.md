@@ -70,8 +70,7 @@ We first iterate through ***document_word_dict.json*** and append each word to a
 
 The second part involved adding weight values to each document for each word. This was done by modifying **frequency_dict** and saving this modified dictionary into ***weighted_dict.json***.
 
-We first deep copy **frequency_dict** to a new dictionary called **weighted_dict**. Then, we iterate through every word in this new dictionary.
-Finally, we save **weighted_dict** as a json file to the data folder.
+We first deep copy **frequency_dict** to a new dictionary called **weighted_dict**. For every word in this new dictionary, we find the document frequency, calculate the max frequency, and calculate the inverted document frequency. Now, for every document ID attributed to said word, we calculate the word frequency and use this value to calculate the weight value. Then, we set the weight value to its corresponding document ID. Once the initial loop has iterated through all words, we save **weighted_dict** as a json file to the data folder.
 
 ## Retrieval and ranking
 
