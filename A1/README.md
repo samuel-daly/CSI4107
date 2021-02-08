@@ -59,6 +59,7 @@ write here
 ## Results
 
 With everything done and working, we went ahead and ran the **trec_eval script** to test our results with the qrels file that we were supplied with. To run the script, we used this command: *./trec_eval -m map -m P.10 trec_microblog11-qrels.txt results.txt*
+
 After running for the MAP (Mean Average Precision and the P10 (Precision in the first 10 documents retrieved), these were our results:
 
 ```
