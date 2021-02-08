@@ -48,7 +48,7 @@ Step 5: Samuel Daly
 
 ## Functionality of the program
 
-For this assignment, we had to work in order of steps. The first step was to pre-process all of the tweets. The second step was to build the inverted index and produce a modified weighted dictionary using the modified tf-idf weighting scheme *w_iq = (0.5 + 0.5 tf_iq)∙idf_i*. The third step was to rank the documents in decreasing order of similarity scores using the cosine method. Finally, running ***create_results.py*** performed document ranking for every given query in ***topics_MB1-49.xml*** and saved the results in ***results.txt***.
+For this assignment, we had to work in order of steps. The first step was to pre-process all of the tweets. The second step was to build the inverted index and produce a modified weighted dictionary using the modified tf-idf weighting scheme *w_iq = (0.5 + 0.5 tf_iq)∙idf_i*. The third step was to rank the documents in decreasing order of similarity scores using the cosine method. Finally, upon running ***create_results.py***, the program called to ***query.py*** to perform document ranking for every given query in ***topics_MB1-49.xml*** and saved the results in ***results.txt***.
 
 ## Preprocessing
 
