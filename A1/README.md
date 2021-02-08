@@ -34,9 +34,15 @@ Step 5: Samuel Daly
 
 ## How to run the program
 
-1. First we need to install some packages. Run ***pip install -r requirements.txt*** if you're on windows, and if you're on MacOS run ***pip3 install -r requirements.txt***  
-2. To create the inverted index, run ***python create_index.py*** if you're on windows, and if you're on MacOS run ***python3 create_index.py***
-3. To create the results, run ***python create_results.py*** if you're on windows, and if you're on MacOS run ***python3 create_results.py***
+### Windows
+1. First we need to install some packages. Run ***pip install -r requirements.txt***
+2. To create the inverted index, run ***python create_index.py***
+3. To create the results, run ***python create_results.py***
+
+### MacOS
+1. First we need to install some packages. Run ***pip3 install -r requirements.txt***
+2. To create the inverted index, run ***python3 create_index.py***
+3. To create the results, run ***python3 create_results.py***
 
 ## Functionality of the program
 
