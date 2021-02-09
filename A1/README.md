@@ -84,9 +84,9 @@ For every word in the weighted vector array, we add this word to a new set calle
 
 Sort this array by highest value first (decreasing order).
 
-For every document in this newly sorted dictionary, we write a line to ***results.txt***. For example, the line follows this structure:
+For every document in this newly sorted dictionary, we write a line to ***results.txt***. This line contains the topic_id, Q0, docno, rank, score, and tag. Here is an example of the structure:
 ```
-1 Q0 3857291841983309 1 0.999 myRun
+1 Q0 30260724248870912 1 0.9944520157716682 myRun
 ```
 The loop breaks at the 1000th document to ensure there are no more than 1000 documents.
 
