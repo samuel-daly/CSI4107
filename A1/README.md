@@ -78,9 +78,17 @@ All of the query ranking is done in the **query.py** file. (elaborate here)
 
 The first step involves reading and parsing each query from ***topics_MB1-49.xml***. This is done by importing ElementTree and utilizing its parse method to retrieve each query. For each query, we perform preprocessing on all words in the query (remove links, remove punctuation, remove stopwords, etc.). Once the query words are processed, we then calculate and return both weighted and frequency vector arrays using the same methods used to create the weighted dictionary (indexing step).
 
-For every query: 
-Next step: preprocessing the query using the **query_processing(text, weighted_dict)** function. 
-Next step: 
+For every word in the weighted vector array, we add this word to a new set called **unique_set_of_documents**. 
+
+
+
+Sort this array by highest value first (decreasing order).
+
+For every document in this newly sorted dictionary, we write a line to ***results.txt***. For example, the line follows this structure:
+```
+1 Q0 3857291841983309 1 0.999 myRun
+```
+The loop breaks at the 1000th document to ensure there are no more than 1000 documents.
 
 ### Future changes
 Currently, a problem is that part of our preprocessing code can be found in 2 separate Python files (***preprocessing.py*** and ***query.py***). This means we have some duplicate code. In the future, we plan on storing this function in one place, and having both locations call to this one function. That way, future changes to our preprocessing would only require modification in one location.
