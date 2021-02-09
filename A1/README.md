@@ -34,6 +34,12 @@ Step 5: Samuel Daly
 
 ## How to run the program
 
+### topics_MB1-49.txt must be converted to XML
+
+1. Rename topics_MB1-49.txt to topics_MB1-49.xml
+2. Add to first line: `<data>`
+3. Add to last line: `</data>`
+
 ### Windows
 
 1. To install necessary packages, run ***pip install -r requirements.txt***
@@ -74,7 +80,7 @@ We first deep copy **frequency_dict** to a new dictionary called **weighted_dict
 
 ## Retrieval and ranking
 
-All of the query ranking is done in the **query.py** file. (elaborate here)
+All of the query ranking is done in the **query.py** file.
 
 The first step involves reading and parsing each query from ***topics_MB1-49.xml***. This is done by importing ElementTree and utilizing its parse method to retrieve each query. For each query, we perform preprocessing on all words in the query (remove links, remove punctuation, remove stopwords, etc.). Once the query words are processed, we then calculate and return both weighted and frequency vector arrays using the same methods used to create the weighted dictionary (indexing step).
 
