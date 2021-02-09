@@ -1,2 +1,5 @@
-nltk==3.5
-numpy==1.19.4
+nltk
+numpy
+regex
+elementpath
+jsonlib
