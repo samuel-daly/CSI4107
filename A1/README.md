@@ -97,7 +97,7 @@ For every document in this newly sorted dictionary, we write a line to ***result
 The loop breaks at the 1000th document to ensure there are no more than 1000 documents.
 
 ### Future changes
-Currently, a problem is that part of our preprocessing code can be found in 2 separate Python files (***preprocessing.py*** and ***query.py***). This means we have some duplicate code. In the future, we plan on storing this function in one place, and having both locations call to this one function. That way, future changes to our preprocessing would only require modification in one location.
+Currently, a problem is that part of our preprocessing code can be found in 2 separate Python files (***preprocessor.py*** and ***query.py***). This means we have some duplicate code. In the future, we plan on storing this function in one place, and having both locations call to this one function. That way, future changes to our preprocessing would only require modification in one location.
 
 ## Results
 
