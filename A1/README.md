@@ -113,6 +113,23 @@ Looking at the precision in the first 10 documents, we achieved 30.2% in precisi
 precision for the first 10 documents if we tweaked the pre-processing. With some better pre-processing, we believe the precision
 for the first 10 documents could have been slightly higher, but overall we are satisfied with our results.
 
+It is important to note that ***create_results.py*** creates different ***results.txt*** files every time it runs. Documents with identical scores are interchangeable. 
+
+For example, in query 1, the first 2 ranked documents are interchangeable:
+
+#### Option 1:
+```
+1 Q0 30260724248870912 1 0.9944520157716682 myRun
+1 Q0 30275282464153600 2 0.9944520157716682 myRun
+```
+
+#### Option 2:
+```
+1 Q0 30275282464153600 1 0.9944520157716682 myRun
+1 Q0 30260724248870912 2 0.9944520157716682 myRun
+```
+
+Since both scores are identical, their ranks are interchangeable. Therefore, document 30260724248870912 is rank 1 and document 30275282464153600 is rank 2, or document 30275282464153600 is rank 1 and document 30260724248870912 is rank 2. This logic applies to all other documents with identical scores.
 
 ## Sample tokens from the vocabulary
 
