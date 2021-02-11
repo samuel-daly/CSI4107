@@ -2,4 +2,3 @@ nltk
 numpy
 regex
 elementpath
-jsonlib
