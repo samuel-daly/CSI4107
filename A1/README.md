@@ -106,6 +106,12 @@ map                   	all	0.2771
 P_10                  	all	0.3020
 ```
 
+MAP reprensents an overall performance of our searching, and we managed to achieve a 27.7% Mean Average Precision. 
+Considering we have a limited data set, and our data set is only considered of tweets, we think this is pretty good.
+
+Looking at the precision in the first 10 documents, we achieved 30.2% in precision. I think we could've achieved a higher
+precision for the first 10 documents if we tweaked the pre-processing. With some better pre-processing, I think the precision
+for the first 10 documents could've been slightly higher, but overall we are satisfies with our results.
 
 
 ## Sample tokens from the vocabulary
