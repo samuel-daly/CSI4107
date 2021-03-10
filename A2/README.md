@@ -1,4 +1,4 @@
-# Assignment 1 - CSI4107
+# Assignment 2 - CSI4107
 
 ## Students
 Samuel Daly - 8173488  
