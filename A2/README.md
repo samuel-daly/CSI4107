@@ -1,4 +1,4 @@
-# Assignment 2 - CSI4107
+# Assignment 1 - CSI4107
 
 ## Students
 Samuel Daly - 8173488  
@@ -96,6 +96,7 @@ The loop breaks at the 1000th document to ensure there are no more than 1000 doc
 Currently, a problem is that part of our preprocessing code can be found in 2 separate Python files (***preprocessor.py*** and ***query.py***). This means we have some duplicate code. In the future, we plan on storing this function in one place, and having both locations call to this one function. That way, future changes to our preprocessing would only require modification in one location.
 
 ## Results
+
 It is important to note that ***create_results.py*** creates different ***results.txt*** files every time it runs. Documents with identical scores are interchangeable. 
 
 For example, in query 1, the first 2 ranked documents are interchangeable:
@@ -131,7 +132,6 @@ Considering we have a limited data set, and our data set is only considered of t
 Looking at the precision in the first 10 documents, we achieved 30.2% in precision. We think we could have achieved a higher
 precision for the first 10 documents if we tweaked the pre-processing. With some better pre-processing, we believe the precision
 for the first 10 documents could have been slightly higher, but overall we are satisfied with our results.
-
 
 ## Sample tokens from the vocabulary
 
@@ -292,6 +292,5 @@ These queries are the result of one specific ***results.txt*** file.
 9. 30019159723089920  Taco Bell's 'meat' filling is 36% meat. Mostly oats, evidently. Which isn't a bad thing, but let's be real: http://bit.ly/dSX8OF
 
 10. 29902271479287808 How Much Actual Beef Is in Taco Bell‘s ’Meat Filling’? | The Blaze http://goo.gl/jrXLK
-
 
 
