@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # Assignment 1 - CSI4107
+=======
+# Assignment 2 - CSI4107
+>>>>>>> fc44daef53a56e7ae16a83cdac0f83ad0b502cff
 
 ## Students
 Samuel Daly - 8173488  
@@ -97,6 +101,29 @@ Currently, a problem is that part of our preprocessing code can be found in 2 se
 
 ## Results
 
+<<<<<<< HEAD
+=======
+It is important to note that ***create_results.py*** creates different ***results.txt*** files every time it runs. Documents with identical scores are interchangeable. 
+
+For example, in query 1, the first 2 ranked documents are interchangeable:
+
+#### Option 1:
+```
+1 Q0 30260724248870912 1 0.9944520157716682 myRun
+1 Q0 30275282464153600 2 0.9944520157716682 myRun
+```
+
+#### Option 2:
+```
+1 Q0 30275282464153600 1 0.9944520157716682 myRun
+1 Q0 30260724248870912 2 0.9944520157716682 myRun
+```
+
+Since both scores are identical, their ranks are interchangeable. Therefore, document 30260724248870912 is rank 1 and document 30275282464153600 is rank 2, or document 30275282464153600 is rank 1 and document 30260724248870912 is rank 2. This logic applies to all other documents with identical scores.
+
+The following scores are the result of one specific ***results.txt*** file:
+
+>>>>>>> fc44daef53a56e7ae16a83cdac0f83ad0b502cff
 With everything done and working, we went ahead and ran the **trec_eval script** to test our results with the qrels file that we were supplied with. To run the script, we used this command: *./trec_eval -m map -m P.10 trec_microblog11-qrels.txt results.txt*
 
 After running for the MAP (Mean Average Precision and the P10 (Precision in the first 10 documents retrieved), these were our results:
@@ -106,6 +133,7 @@ map                   	all	0.2771
 P_10                  	all	0.3020
 ```
 
+<<<<<<< HEAD
 MAP reprensents an overall performance of our searching, and we managed to achieve a 27.7% Mean Average Precision. 
 Considering we have a limited data set, and our data set is only considered of tweets, we think this is pretty good.
 
@@ -113,6 +141,14 @@ Looking at the precision in the first 10 documents, we achieved 30.2% in precisi
 precision for the first 10 documents if we tweaked the pre-processing. With some better pre-processing, I think the precision
 for the first 10 documents could've been slightly higher, but overall we are satisfies with our results.
 
+=======
+MAP represents an overall performance of our searching, and we managed to achieve a 27.7% Mean Average Precision. 
+Considering we have a limited data set, and our data set is only considered of tweets, we think this is pretty good.
+
+Looking at the precision in the first 10 documents, we achieved 30.2% in precision. We think we could have achieved a higher
+precision for the first 10 documents if we tweaked the pre-processing. With some better pre-processing, we believe the precision
+for the first 10 documents could have been slightly higher, but overall we are satisfied with our results.
+>>>>>>> fc44daef53a56e7ae16a83cdac0f83ad0b502cff
 
 ## Sample tokens from the vocabulary
 
@@ -222,6 +258,11 @@ naum
 
 ## Sample queries
 
+<<<<<<< HEAD
+=======
+These queries are the result of one specific ***results.txt*** file.
+
+>>>>>>> fc44daef53a56e7ae16a83cdac0f83ad0b502cff
 ### <ins>Query 3</ins>
 "Haiti Aristide return"
 
