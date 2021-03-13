@@ -1,0 +1,8 @@
+nltk
+numpy
+regex
+elementpath
+<<<<<<< HEAD
+jsonlib
+=======
+>>>>>>> fc44daef53a56e7ae16a83cdac0f83ad0b502cff
