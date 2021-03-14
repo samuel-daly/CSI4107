@@ -96,10 +96,7 @@ map                   	all	0.2771
 P_10                  	all	0.3020
 ```
 
-
 ### Experiment 1
-
-Results
 
 ```
 map                   	all	0.
@@ -107,8 +104,6 @@ P_10                  	all	0.
 ```
 
 ### Experiment 2
-
-Results
 
 Looking at theses results, we can see that they are not as good as the results we achieved in our first assignment. Query expansion itself is used to increase the quality of the search results but that comes at the expense of precision. This is why we're seeing a lower MAP and a lower Precision for the first 10 documents.
 
