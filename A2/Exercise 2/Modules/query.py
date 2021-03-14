@@ -103,6 +103,62 @@ def query_processing(text, weighted_dict):
     #Return both (w_vect) and (f_vect)
     return (w_vect, f_vect)
 
+def new_queries(words, weighted_dict):
+    #remove punctuations
+    punct_set = string.punctuation
+
+    new_words = []
+
+    #Intialize both word and frequency vectors
+    w_vect = []
+    f_vect = []
+
+    for word in words:
+        no_punct = ""
+        for char in word:
+            if char not in punct_set:
+                no_punct = no_punct + char
+        new_words.append(no_punct.lower())
+
+    #Iterate through all words
+    for word in new_words:
+        
+        w_vect.append(word)
+
+        #calculate max_freq
+        documents = weighted_dict.get(word,{})
+
+        max_freq = 0
+        for i in documents:
+            if documents[i] > max_freq:
+                max_freq = documents[i]
+
+        if(max_freq > 0):
+            #calculate inv_doc_freq
+            doc_freq = len(documents)
+            inv_doc_freq = math.log((float(len(weighted_dict)) / doc_freq), 2)
+
+            for id in documents:
+
+                #creates copy of documents[id]
+                freq = documents[id]
+
+                #calculate word_freq
+                word_freq = float(freq) / max_freq
+
+                #calculate weight value
+                weight = inv_doc_freq * (0.5 + (0.5 * word_freq))
+
+            #append calculated weight value to f_vect
+            f_vect.append(weight)
+            
+        else:
+            #append weight value as 0
+            f_vect.append(0)
+
+    #Return both (w_vect) and (f_vect)
+    return (w_vect, f_vect)        
+
 
 
 def do_query(document_word_dict_path, frequency_dict_path, weighted_dict_path, queries_path):
@@ -149,7 +205,7 @@ def do_query(document_word_dict_path, frequency_dict_path, weighted_dict_path, q
     #       words -> will give the synonyms for said word, in this case healthcare
 
     #Create Results
-    with open("Modules/data/results.txt", 'w') as file:
+    with open("Modules/data/results_new.txt", 'w') as file:
         for q in t.getroot():
 
             #Sets Query ID
@@ -158,11 +214,37 @@ def do_query(document_word_dict_path, frequency_dict_path, weighted_dict_path, q
             query_id = re.sub('[^0-9]','', query_id) #only digits remain
             query_id = query_id.lstrip('0') #removes zeros and strings
 
-
+            
             #Query Processing
             w_vect, f_vect = query_processing(q[1].text, weighted_dict)
+
+            print("Old Word Vector -- " + str(w_vect))
+
+            # New word vect
+            temp_w_vect = []
         
             # Go through w_vect and add synonyms for each word in the query
+            for word in w_vect:
+                try:    
+                    similar = model.most_similar(word)
+                    words_similar = list(w[0] for w in similar)
+                    temp_w_vect.append(word)
+                    for i in range(2):
+                        temp_w_vect.append(words_similar[i])
+                except:
+                    temp_w_vect.append(word)
+                    continue
+
+            
+            # Replace w_vect with the new vect
+            new_w_vect, new_f_vect = new_queries(temp_w_vect, weighted_dict)
+            w_vect = new_w_vect
+            f_vect = new_f_vect
+
+            print("New Word Vector -- " + str(w_vect))
+            print("Frequency Vector -- " + str(f_vect))
+
+            print("----------- Next query -------------")
 
 
             #Create unique set of documents associated to each word in w_vect
