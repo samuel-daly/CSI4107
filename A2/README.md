@@ -115,28 +115,30 @@ P_10                  	all	0.1735
 
 ## Sample queries
 
-### Experiment 1
+All queries are the result of one specific ***results.txt*** file.
 
-These queries are the result of one specific ***results.txt*** file.
 
-### <ins>Query 3</ins>
-"Haiti Aristide return"
+### <ins>Experiment 1</ins>
+
+These queries are the result running experiment number 1.
+
+
+### Query 3: "Haiti Aristide return"
+
+#### Results
+
+
+### Query 20: "Taco Bell filling lawsuit"
 
 #### Results
 
 
+### <ins>Experiment 2</ins>
 
-### <ins>Query 20</ins>
-"Taco Bell filling lawsuit"
+These queries are the result running experiment number 2.
 
-#### Results
 
-### Experiment 2
-
-These queries are the result running experiment number 2
-
-### <ins>Query 3</ins>
-"Haiti Aristide return"
+### Query 3: "Haiti Aristide return"
 
 #### Results
 
@@ -161,8 +163,7 @@ These queries are the result running experiment number 2
 10. 32211683082502144	#int'l #news: Haiti opens door for return of ex-president Aristide: PORT-AU-PRINCE (Reuters) - Haiti'... http://bit.ly/gSIFwd #singapore
 
 
-### <ins>Query 20</ins>
-"Taco Bell filling lawsuit"
+### Query 20: "Taco Bell filling lawsuit"
 
 #### Results
 
