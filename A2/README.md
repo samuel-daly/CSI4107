@@ -105,18 +105,18 @@ P_10                  	all	0.
 
 ### Experiment 2
 
-Looking at theses results, we can see that they are not as good as the results we achieved in our first assignment. Query expansion itself is used to increase the quality of the search results but that comes at the expense of precision. This is why we are seeing a lower MAP and a lower Precision for the first 10 documents.
-
 ```
 map                   	all	0.2076
 P_10                  	all	0.1735
 ```
+Looking at theses results, we can see that they are not as good as the results we achieved in our first assignment. Query expansion itself is used to increase the quality of the search results but that comes at the expense of precision. This is why we are seeing a lower MAP and a lower Precision for the first 10 documents.
 
 
 ## Sample queries
 
 All queries are the result of one specific ***results.txt*** file.
 
+<br>
 
 ### <ins>Experiment 1</ins>
 
@@ -132,6 +132,7 @@ These queries are the result running experiment number 1.
 
 #### Results
 
+<br>
 
 ### <ins>Experiment 2</ins>
 
