@@ -6,6 +6,9 @@ Ryan Matte - 300027432
 Michel Moore - 300063096
 
 ## Task Division
+
+Experiment 1: Samuel Daly & Michel Moore
+Experiment 2: Samuel Daly & Ryan Matte
  
 
 ## Folder Layout
@@ -15,19 +18,17 @@ Michel Moore - 300063096
 ```
 ├── Modules
 │   ├── data
-│   │   ├── document_word_dict.json
-│   │   ├── frequency_dict.json
-│   │   ├── stopwords.txt
+│   │   ├── results.txt
 │   │   ├── topics_MB1-49.xml
 │   │   ├── trec-microblog11-qrels.txt
 │   │   ├── trec-microblog11.txt
-│   │   └── weighted_dict.json
-│   ├── indexer.py
-│   ├── preprocessor.py
+│   │   └── tweets_embeddings_dict.json
+│   ├── processor.py
 │   └── query.py
+├── universal-sentence-encoder_4
 ├── requirements.txt
-├── create_index.py
-└── create_results.py
+├── embed.py
+└── main.py
 ```
 
 ### Experiment 2
@@ -56,19 +57,39 @@ Michel Moore - 300063096
 
 ## How to run the program
 
-### topics_MB1-49.txt must be converted to XML
+### Experiment 1
+
+#### topics_MB1-49.txt must be converted to XML
 
 1. Rename topics_MB1-49.txt to topics_MB1-49.xml
 2. Add to first line: `<data>`
 3. Add to last line: `</data>`
 
-### Windows
+#### Windows
+
+1. To install necessary packages, run ***pip install -r requirements.txt***
+2. To run, run ***python main.py***
+
+#### MacOS
+
+1. To install necessary packages, run ***pip3 install -r requirements.txt***
+2. To run, run ***python3 main.py***
+
+### Experiment 2
+
+#### topics_MB1-49.txt must be converted to XML
+
+1. Rename topics_MB1-49.txt to topics_MB1-49.xml
+2. Add to first line: `<data>`
+3. Add to last line: `</data>`
+
+#### Windows
 
 1. To install necessary packages, run ***pip install -r requirements.txt***
 2. To create the inverted index, run ***python create_index.py***
 3. To create the results, run ***python create_results.py***
 
-### MacOS
+#### MacOS
 
 1. To install necessary packages, run ***pip3 install -r requirements.txt***
 2. To create the inverted index, run ***python3 create_index.py***
@@ -76,11 +97,11 @@ Michel Moore - 300063096
 
 ## Functionality of the program
 
-For this assignment, we took the code of our Assignment 1, and made small modifications in order to perform some experiments.
+For this assignment, we took the code of our Assignment 1, and made small modifications in order to do some experiments on it.
 
 For experiment 1,...
 
-For experiment 2, not much was needed to be changed in terms of the code. The goal of this experiment was to do some query vector modification or query expansion based on pretrained word embeddings. We ended up using a Word2Vec model built on a Twitter Corpus and some code built by Loreto Parisi which we found on GitHub. (https://github.com/loretoparisi/word2vec-twitter) This code allowed us to run our previous code without many changes. The code we found on GitHub allowed us to find similar words for the words that appeared in each query. By finding those similar words or synonyms, it allowed us to expand the query. 
+For experiment 2, not much was needed to be changed in terms of the code. The goal of this experiment was to do some query vector modification or query expansince based on pretrained word embeddings. We ended up using a Word2Vec model built on a Twitter Corpus and some code built by Loreto Parisi which we found on GitHub. (https://github.com/loretoparisi/word2vec-twitter) This code allowed us to run our previous code without many changes. The code we found on GitHub allowed us to find similar words for the words that appeared in each query. By finding those similar words or synonyms, it allowed us to expand the query. 
 
 After expanding the query, we needed to re-vectorize the query. To do that, we just used the code we previously built for assignment 1, but with some slight modifications given that we were passing a list of in the function instead of a full query. With the query re-vectorized, we were able to build new results and test them using the TREC evaluation method. Those results can be found in the ***Results*** section of this file.
 
@@ -99,47 +120,84 @@ P_10                  	all	0.3020
 ### Experiment 1
 
 ```
-map                   	all	0.
-P_10                  	all	0.
+map                   	all	0.2304
+P_10                  	all	0.2878
 ```
 
 ### Experiment 2
+
+Looking at theses results, we can see that they are not as good as the results we achieved in our first assignment. Query expansion itself is used to increase the quality of the search results but that comes at the expense of precision. This is why we're seeing a lower MAP and a lower Precision for the first 10 documents.
 
 ```
 map                   	all	0.2076
 P_10                  	all	0.1735
 ```
-Looking at theses results, we can see that they are not as good as the results we achieved in our first assignment. Query expansion itself is used to increase the quality of the search results but that comes at the expense of precision. This is why we are seeing a lower MAP and a lower Precision for the first 10 documents.
 
 
 ## Sample queries
 
-All queries are the result of one specific ***results.txt*** file.
+### Experiment 1
 
-<br>
+These queries are the result of one specific ***results.txt*** file.
 
-### <ins>Experiment 1</ins>
-
-These queries are the result running experiment number 1.
-
-
-### Query 3: "Haiti Aristide return"
+### <ins>Query 3</ins>
+"Haiti Aristide return"
 
 #### Results
 
+1. 33254598118473728	Haiti/ Presidenzi http://www.worldonlinereview.com/italia/2011/02/03/haiti-presidenziali-ballottaggio-tra-ex-first-lady-e-cantante-virgilio/
 
-### Query 20: "Taco Bell filling lawsuit"
+2. 34410414846517248	ARISTIDE SERAIT DE RETOUR EN HAITI
+
+3. 32439513519230976	Haiti Noir http://bit.ly/hLMKjG #haiti
+
+4. 33325579583365120	Haiti poll revised http://bit.ly/gQJU0s #Haiti
+
+5. 35032969643175936	Haiti will raise again
+
+6. 29296574815272960	Haiti – Aristide : His return, an international affair… – Haitilibre.com http://bit.ly/gzyLXG #haiti
+
+7. 34682906718908416	Haiti: One Year Later, Acupuncturists Return http://www.acupuncturetoday.com/mpacms/at/article.php?id=32366
+
+8. 34518512273719296	Haiti overwhelmed by dead, devastation http://bit.ly/gcj56c #Haiti
+
+9. 35088534306033665	Haiti concede passaporte a Aristide.
+
+10. 34896269163896832	Haiti: Verjagter Ex-Präsident Aristide will heimkehren http://bit.ly/h7EHvx
+
+
+
+### <ins>Query 20</ins>
+"Taco Bell filling lawsuit"
 
 #### Results
 
-<br>
+1. 30727342653444098	Taco Bell buzz on the 'beef' class-action lawsuit http://www.latimes.com/health/boostershots/la-taco-bell-beef-buzz-20110126,0,6128287.story
 
-### <ins>Experiment 2</ins>
+2. 32865855435968512	Taco Bell Has Beef with Lawsuit’s Claims http://zoo.mn/euh1Oe
 
-These queries are the result running experiment number 2.
+3. 31101259872215040	Taco Bell issues response to lawsuits: suck it. http://tinyurl.com/4qqwhlz
 
+4. 31948737517453312	Taco Bell answers lawsuit: "Yes, that is beef" - http://on.msnbc.com/fmYKNX
 
-### Query 3: "Haiti Aristide return"
+5. 30004107020337152	Taco Tuesday indeed... Taco Bell sued: Lawsuit filed in beef over Taco Bell 'meat' - Sun-Sentinel.com http://bit.ly/hnk6vo // CC: @XeL13
+
+6. 30310229434437632	GROSS! Taco Bell Sued for Bogus Beef http://adage.com/u/R2p5wa
+
+7. 30962906484969472	Taco Bell Fights Back On Beef Lawsuit http://dlvr.it/FH1pt
+
+8. 29356462186696704	Free taco bell ! #forthewin
+
+9. 31085134354583552	Taco Bell has a beef with meat lawsuit .. http://tinyurl.com/669maut
+
+10. 31052864197496832	Taco BELL* sued for serving beef that is 35% beef..I lied.
+
+### Experiment 2
+
+These queries are the result running exeperiment number 2
+
+### <ins>Query 3</ins>
+"Haiti Aristide return"
 
 #### Results
 
@@ -164,7 +222,8 @@ These queries are the result running experiment number 2.
 10. 32211683082502144	#int'l #news: Haiti opens door for return of ex-president Aristide: PORT-AU-PRINCE (Reuters) - Haiti'... http://bit.ly/gSIFwd #singapore
 
 
-### Query 20: "Taco Bell filling lawsuit"
+### <ins>Query 20</ins>
+"Taco Bell filling lawsuit"
 
 #### Results
 
