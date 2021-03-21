@@ -8,6 +8,7 @@ Michel Moore - 300063096
 ## Task Division
 
 Experiment 1: Samuel Daly & Michel Moore
+
 Experiment 2: Samuel Daly & Ryan Matte
  
 
@@ -22,10 +23,10 @@ Experiment 2: Samuel Daly & Ryan Matte
 │   │   ├── topics_MB1-49.xml
 │   │   ├── trec-microblog11-qrels.txt
 │   │   ├── trec-microblog11.txt
-│   │   └── tweets_embeddings_dict.json
+│   │   └── tweets_embeddings_dict.json (Not included in folder since file is too big)
 │   ├── processor.py
 │   └── query.py
-├── universal-sentence-encoder_4
+├── universal-sentence-encoder_4 (Not included in folder since file is too big)
 ├── requirements.txt
 ├── embed.py
 └── main.py
