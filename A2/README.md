@@ -76,11 +76,11 @@ Michel Moore - 300063096
 
 ## Functionality of the program
 
-For this assignment, we took the code of our Assignment 1, and made small modifications in order to do some experiments on it.
+For this assignment, we took the code of our Assignment 1, and made small modifications in order to perform some experiments.
 
 For experiment 1,...
 
-For experiment 2, not much was needed to be changed in terms of the code. The goal of this experiment was to do some query vector modification or query expansince based on pretrained word embeddings. We ended up using a Word2Vec model built on a Twitter Corpus and some code built by Loreto Parisi which we found on GitHub. (https://github.com/loretoparisi/word2vec-twitter) This code allowed us to run our previous code without many changes. The code we found on GitHub allowed us to find similar words for the words that appeared in each query. By finding those similar words or synonyms, it allowed us to expand the query. 
+For experiment 2, not much was needed to be changed in terms of the code. The goal of this experiment was to do some query vector modification or query expansion based on pretrained word embeddings. We ended up using a Word2Vec model built on a Twitter Corpus and some code built by Loreto Parisi which we found on GitHub. (https://github.com/loretoparisi/word2vec-twitter) This code allowed us to run our previous code without many changes. The code we found on GitHub allowed us to find similar words for the words that appeared in each query. By finding those similar words or synonyms, it allowed us to expand the query. 
 
 After expanding the query, we needed to re-vectorize the query. To do that, we just used the code we previously built for assignment 1, but with some slight modifications given that we were passing a list of in the function instead of a full query. With the query re-vectorized, we were able to build new results and test them using the TREC evaluation method. Those results can be found in the ***Results*** section of this file.
 
@@ -105,38 +105,41 @@ P_10                  	all	0.
 
 ### Experiment 2
 
-Looking at theses results, we can see that they are not as good as the results we achieved in our first assignment. Query expansion itself is used to increase the quality of the search results but that comes at the expense of precision. This is why we're seeing a lower MAP and a lower Precision for the first 10 documents.
-
 ```
 map                   	all	0.2076
 P_10                  	all	0.1735
 ```
+Looking at theses results, we can see that they are not as good as the results we achieved in our first assignment. Query expansion itself is used to increase the quality of the search results but that comes at the expense of precision. This is why we are seeing a lower MAP and a lower Precision for the first 10 documents.
 
 
 ## Sample queries
 
-### Experiment 1
+All queries are the result of one specific ***results.txt*** file.
 
-These queries are the result of one specific ***results.txt*** file.
+<br>
 
-### <ins>Query 3</ins>
-"Haiti Aristide return"
+### <ins>Experiment 1</ins>
 
-#### Results
-
+These queries are the result running experiment number 1.
 
 
-### <ins>Query 20</ins>
-"Taco Bell filling lawsuit"
+### Query 3: "Haiti Aristide return"
 
 #### Results
 
-### Experiment 2
 
-These queries are the result running exeperiment number 2
+### Query 20: "Taco Bell filling lawsuit"
 
-### <ins>Query 3</ins>
-"Haiti Aristide return"
+#### Results
+
+<br>
+
+### <ins>Experiment 2</ins>
+
+These queries are the result running experiment number 2.
+
+
+### Query 3: "Haiti Aristide return"
 
 #### Results
 
@@ -161,8 +164,7 @@ These queries are the result running exeperiment number 2
 10. 32211683082502144	#int'l #news: Haiti opens door for return of ex-president Aristide: PORT-AU-PRINCE (Reuters) - Haiti'... http://bit.ly/gSIFwd #singapore
 
 
-### <ins>Query 20</ins>
-"Taco Bell filling lawsuit"
+### Query 20: "Taco Bell filling lawsuit"
 
 #### Results
 
