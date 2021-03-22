@@ -142,7 +142,7 @@ All queries are the result of one specific ***results.txt*** file.
 
 ### <ins>Experiment 1</ins>
 
-These queries are the result running experiment number 1.
+These queries are the result of running experiment number 1.
 
 ### Query 3: "Haiti Aristide return"
 
@@ -198,7 +198,7 @@ These queries are the result running experiment number 1.
 
 ### <ins>Experiment 2</ins>
 
-These queries are the result running experiment number 2.
+These queries are the result of running experiment number 2.
 
 ### Query 3: "Haiti Aristide return"
 
