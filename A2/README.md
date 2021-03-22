@@ -100,7 +100,7 @@ Experiment 2: Samuel Daly & Ryan Matte
 
 For this assignment, we took the code of our Assignment 1, and made small modifications in order to perform some experiments.
 
-For experiment 1,...
+For experiment 1, a lot of code was changed. We decided to use the [Universal Sentence Encoder](https://tfhub.dev/google/universal-sentence-encoder/4) found on Tensorflow-hub. On the website, there was a pre-trained model which we used for this experiment. To start off, we removed some of the pre-processing we did in the original assignment, since we didn't really need to process the tweets much. The only processing that we did was removing links and removing words that contained numbers. Next we embedded each tweet using the Universal Sentece Encoder. Once embedded, we save the vector of each tweet in a dictionnary and attached it to the tweet number. This allowed us to know which vector belonged to which tweet. The following step was to find the similarity score between the query and documents. For this, we loop through the queries, take the text of the query, do the same processing as earlier on said query and then run the query through a loop where it finds the similarity score between the query and each document. For this we use ***np.inner()*** which returns the inner product of 2 vectors and gives us the similiarity between the document and the query. We then sort all the scores and save the top 1000 documents in the file called ***results.txt***
 
 For experiment 2, not much was needed to be changed in terms of the code. The goal of this experiment was to do some query vector modification or query expansion based on pretrained word embeddings. We ended up using a Word2Vec model built on a Twitter Corpus and some code built by Loreto Parisi which we found on GitHub. (https://github.com/loretoparisi/word2vec-twitter) This code allowed us to run our previous code without many changes. The code we found on GitHub allowed us to find similar words for the words that appeared in each query. By finding those similar words or synonyms, it allowed us to expand the query. 
 
@@ -144,9 +144,9 @@ All queries are the result of one specific ***results.txt*** file.
 
 These queries are the result running experiment number 1.
 
-### Query 3: "Haiti Aristide return"
+#### Query 3: "Haiti Aristide return"
 
-#### Results
+##### Results
 
 1. 33254598118473728	Haiti/ Presidenzi http://www.worldonlinereview.com/italia/2011/02/03/haiti-presidenziali-ballottaggio-tra-ex-first-lady-e-cantante-virgilio/
 
@@ -170,9 +170,9 @@ These queries are the result running experiment number 1.
 
 
 
-### Query 20: "Taco Bell filling lawsuit"
+#### Query 20: "Taco Bell filling lawsuit"
 
-#### Results
+##### Results
 
 1. 30727342653444098	Taco Bell buzz on the 'beef' class-action lawsuit http://www.latimes.com/health/boostershots/la-taco-bell-beef-buzz-20110126,0,6128287.story
 
@@ -200,9 +200,9 @@ These queries are the result running experiment number 1.
 
 These queries are the result running experiment number 2.
 
-### Query 3: "Haiti Aristide return"
+#### Query 3: "Haiti Aristide return"
 
-#### Results
+##### Results
 
 1. 34950800157450240	John Baer: Who didn't see this coming?: TO THOSE who know Ed and Midge Rendell - heck, to the Philly world at la... http://bit.ly/ii6WEO
 
@@ -225,9 +225,9 @@ These queries are the result running experiment number 2.
 10. 32211683082502144	#int'l #news: Haiti opens door for return of ex-president Aristide: PORT-AU-PRINCE (Reuters) - Haiti'... http://bit.ly/gSIFwd #singapore
 
 
-### Query 20: "Taco Bell filling lawsuit"
+#### Query 20: "Taco Bell filling lawsuit"
 
-#### Results
+##### Results
 
 1. 29906116062220290	Lawsuit: Taco Bell Ground Beef Is Really Just "Meat Filling" - @consumerist http://consumerist.com/2011/01/lawsuit-says-taco-bell-ground-beef-is-really-just-taco-meat-filling.html?utm_source=streamsend&utm_medium=email&utm_content=13297631&utm_campaign=Fo
 
