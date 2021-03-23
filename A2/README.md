@@ -8,6 +8,7 @@ Michel Moore - 300063096
 ## Task Division
 
 Experiment 1: Samuel Daly & Michel Moore
+
 Experiment 2: Samuel Daly & Ryan Matte
 
 
