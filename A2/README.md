@@ -8,9 +8,8 @@ Michel Moore - 300063096
 ## Task Division
 
 Experiment 1: Samuel Daly & Michel Moore
-
 Experiment 2: Samuel Daly & Ryan Matte
- 
+
 
 ## Folder Layout
 
@@ -103,7 +102,7 @@ Experiment 2: Samuel Daly & Ryan Matte
 
 ## Functionality of the program
 
-For experiment 1, a lot of code was changed. We decided to use the [Universal Sentence Encoder](https://tfhub.dev/google/universal-sentence-encoder/4) found on Tensorflow-hub. On the website, there was a pre-trained model which we used for this experiment. To start off, we removed some of the pre-processing we did in the original assignment, since we didn't really need to process the tweets much. The only processing that we did was removing links and removing words that contained numbers. Next we embedded each tweet using the Universal Sentece Encoder. Once embedded, we save the vector of each tweet in a dictionnary and attached it to the tweet number. This allowed us to know which vector belonged to which tweet. The following step was to find the similarity score between the query and documents. For this, we loop through the queries, take the text of the query, do the same processing as earlier on said query and then run the query through a loop where it finds the similarity score between the query and each document. For this we use ***np.inner()*** which returns the inner product of 2 vectors and gives us the similiarity between the document and the query. We then sort all the scores and save the top 1000 documents in the file called ***results.txt***
+For experiment 1, a lot of code was changed. We decided to use the [Universal Sentence Encoder](https://tfhub.dev/google/universal-sentence-encoder/4) found on TensorFlow-hub. On the website, there was a pre-trained model which we used for this experiment. To start off, we removed some of the pre-processing we did in the original assignment, since we did not really need to process the tweets much. The only processing that we did was removing links and removing words that contained numbers. Next, we embedded each tweet using the Universal Sentence Encoder. Once embedded, we save the vector of each tweet in a dictionary and attached it to the tweet number. This allowed us to know which vector belonged to which tweet. The following step was to find the similarity score between the query and documents. For this, we loop through the queries, take the text of the query, do the same processing as earlier on said query and then run the query through a loop where it finds the similarity score between the query and each document. For this we use ***np.inner()*** which returns the inner product of 2 vectors and gives us the similarity between the document and the query. We then sort all the scores and save the top 1000 documents in the file called ***results.txt***.
 
 For experiment 2, not much was needed to be changed in terms of the code. The goal of this experiment was to do some query vector modification or query expansion based on pretrained word embeddings. We ended up using a Word2Vec model built on a Twitter Corpus and some code built by Loreto Parisi which we found on GitHub. (https://github.com/loretoparisi/word2vec-twitter) This code allowed us to run our previous code without many changes. The code we found on GitHub allowed us to find similar words for the words that appeared in each query. By finding those similar words or synonyms, it allowed us to expand the query. 
 
@@ -134,7 +133,7 @@ P_10                  	all	0.1735
 
 ## Discussion
 
-Looking at theses results, we can see that they are not as good as the results we achieved in our first assignment. The results for experiment 1 are lower due to the fact that we take the whole sentence instead of just taking keywords like we did in A1. Not as much pre-processing is required for the universal sentence encoder and this means we'll get a lower score given that it includes stopwords and it doesn't stem the words. For experiment 2, we can see an even lower score because we used query expansion. Query expansion itself is used to increase the quality of the search results but that comes at the expense of precision. This is why we are seeing a lower MAP and a lower Precision for the first 10 documents.
+Looking at theses results, we can see that they are not as good as the results we achieved in our first assignment. The results for experiment 1 are lower due to the fact that we take the whole sentence instead of just taking keywords like we did in A1. Not as much pre-processing is required for the universal sentence encoder and this means we will get a lower score given that it includes stopwords and it does not stem the words. For experiment 2, we can see an even lower score because we used query expansion. Query expansion itself is used to increase the quality of the search results but that comes at the expense of precision. This is why we are seeing a lower MAP and a lower Precision for the first 10 documents.
 
 ## Sample queries
 
