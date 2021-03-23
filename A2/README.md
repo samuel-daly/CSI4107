@@ -131,6 +131,9 @@ P_10                  	all	0.2878
 map                   	all	0.2076
 P_10                  	all	0.1735
 ```
+
+## Discussion
+
 Looking at theses results, we can see that they are not as good as the results we achieved in our first assignment. The results for experiment 1 are lower due to the fact that we take the whole sentence instead of just taking keywords like we did in A1. Not as much pre-processing is required for the universal sentence encoder and this means we'll get a lower score given that it includes stopwords and it doesn't stem the words. For experiment 2, we can see an even lower score because we used query expansion. Query expansion itself is used to increase the quality of the search results but that comes at the expense of precision. This is why we are seeing a lower MAP and a lower Precision for the first 10 documents.
 
 ## Sample queries
