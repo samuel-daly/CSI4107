@@ -205,7 +205,7 @@ def do_query(document_word_dict_path, frequency_dict_path, weighted_dict_path, q
     #       words -> will give the synonyms for said word, in this case healthcare
 
     #Create Results
-    with open("Modules/data/results_new.txt", 'w') as file:
+    with open("Modules/data/results.txt", 'w') as file:
         for q in t.getroot():
 
             #Sets Query ID
@@ -217,8 +217,6 @@ def do_query(document_word_dict_path, frequency_dict_path, weighted_dict_path, q
             
             #Query Processing
             w_vect, f_vect = query_processing(q[1].text, weighted_dict)
-
-            print("Old Word Vector -- " + str(w_vect))
 
             # New word vect
             temp_w_vect = []
@@ -240,12 +238,6 @@ def do_query(document_word_dict_path, frequency_dict_path, weighted_dict_path, q
             new_w_vect, new_f_vect = new_queries(temp_w_vect, weighted_dict)
             w_vect = new_w_vect
             f_vect = new_f_vect
-
-            print("New Word Vector -- " + str(w_vect))
-            print("Frequency Vector -- " + str(f_vect))
-
-            print("----------- Next query -------------")
-
 
             #Create unique set of documents associated to each word in w_vect
             unique_set_of_documents = set()
